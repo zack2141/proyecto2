@@ -1,4 +1,5 @@
-	@Query(value="select nombre, apellido, cedula from reserva, disponibilidad, automovil"
+// pegar en repositorio usuario
+@Query(value="select nombre, apellido, cedula from reserva, disponibilidad, automovil"
 			+ "where reserva.id_disponibilidad = disponibilidad.iddisponibilidad and disponibilidad.id_automovil = :inAutoMovil;",
 			 nativeQuery=true)
 	public List<Object> atenticacion(@Param ("inAutoMovil") String inAutoMovil);
