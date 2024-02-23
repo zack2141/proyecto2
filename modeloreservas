@@ -1,0 +1,66 @@
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "reservas")
+public class Reservas {
+	
+	@Id
+	@Column(name="id_reserva", length = 50, nullable = false)
+	private String id_reserva;
+
+	@Column(name = "RegisPago", length = 50, nullable = false)
+	private String RegisPago;
+	
+	@Column(name="FechaReser", length = 50, nullable = false)
+	private String FechaReser;
+
+	@Column(name = "destino", length = 50, nullable = false)
+	private String destino;
+
+	public Reservas() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Reservas(String id_reserva, String regisPago, String fechaReser, String destino) {
+		super();
+		this.id_reserva = id_reserva;
+		RegisPago = regisPago;
+		FechaReser = fechaReser;
+		this.destino = destino;
+	}
+
+	public String getId_reserva() {
+		return id_reserva;
+	}
+
+	public void setId_reserva(String id_reserva) {
+		this.id_reserva = id_reserva;
+	}
+
+	public String getRegisPago() {
+		return RegisPago;
+	}
+
+	public void setRegisPago(String regisPago) {
+		RegisPago = regisPago;
+	}
+
+	public String getFechaReser() {
+		return FechaReser;
+	}
+
+	public void setFechaReser(String fechaReser) {
+		FechaReser = fechaReser;
+	}
+
+	public String getDestino() {
+		return destino;
+	}
+
+	public void setDestino(String destino) {
+		this.destino = destino;
+	}
