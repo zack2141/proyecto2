@@ -1,0 +1,45 @@
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "automovil")
+public class Automovil {
+	
+	@Id
+	@Column(name="cantPuestos", length = 50, nullable = false)
+	private int cantPuestos;
+
+	@Column(name = "NumAutomovil", length = 50, nullable = false)
+	private int NumAutomovil;
+
+	public Automovil() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Automovil(int cantPuestos, int numAutomovil) {
+		super();
+		this.cantPuestos = cantPuestos;
+		NumAutomovil = numAutomovil;
+	}
+
+	public int getCantPuestos() {
+		return cantPuestos;
+	}
+
+	public void setCantPuestos(int cantPuestos) {
+		this.cantPuestos = cantPuestos;
+	}
+
+	public int getNumAutomovil() {
+		return NumAutomovil;
+	}
+
+	public void setNumAutomovil(int numAutomovil) {
+		NumAutomovil = numAutomovil;
+	}
+	
+	
+}
