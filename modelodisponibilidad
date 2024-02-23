@@ -1,0 +1,70 @@
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "disponibilidad")
+public class Disponibilidad {
+
+	@Id
+	@Column(name="fecha", length = 50, nullable = false)
+	private String fecha;
+
+	@Column(name = "CantPuesDisponi", length = 50, nullable = false)
+	private int CantPuesDisponi;
+	
+	@Column(name="HoraSalida", length = 50, nullable = false)
+	private String HoraSalida;
+
+	@Column(name = "Id_disponibilidad", length = 50, nullable = false)
+	private int Id_disponibilidad;
+	
+	public Disponibilidad() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Disponibilidad(String fecha, int cantPuesDisponi, String horaSalida, int id_disponibilidad,
+			int id_automovil) {
+		super();
+		this.fecha = fecha;
+		CantPuesDisponi = cantPuesDisponi;
+		HoraSalida = horaSalida;
+		Id_disponibilidad = id_disponibilidad;
+	
+	}
+
+	public String getFecha() {
+		return fecha;
+	}
+
+	public void setFecha(String fecha) {
+		this.fecha = fecha;
+	}
+
+	public int getCantPuesDisponi() {
+		return CantPuesDisponi;
+	}
+
+	public void setCantPuesDisponi(int cantPuesDisponi) {
+		CantPuesDisponi = cantPuesDisponi;
+	}
+
+	public String getHoraSalida() {
+		return HoraSalida;
+	}
+
+	public void setHoraSalida(String horaSalida) {
+		HoraSalida = horaSalida;
+	}
+
+	public int getId_disponibilidad() {
+		return Id_disponibilidad;
+	}
+
+	public void setId_disponibilidad(int id_disponibilidad) {
+		Id_disponibilidad = id_disponibilidad;
+	}
+
+	
