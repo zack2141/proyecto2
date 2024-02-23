@@ -1,0 +1,96 @@
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+
+@Entity
+@Table(name ="usuario")
+
+public class Usuario {
+	
+	@Id
+	@Column(name ="id_usuario")
+	private Long Id;
+	
+	@Column(name="fecha_nacimiento", length =50, nullable = false)
+	private String fecha_nacimiento;
+	
+	@Column(name="nombres", length =50, nullable = false)
+	private String nombres;
+	
+	@Column(name="apellidos", length =50, nullable = false)
+	private String apellidos;
+	
+	@Column(name="cedula")
+	private Long cedula;
+	
+	@Column(name="telefono")
+	private Long telefono;
+
+	public Usuario() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Usuario(Long id, String fecha_nacimiento, String nombres, String apellidos, Long cedula, Long telefono) {
+		super();
+		Id = id;
+		this.fecha_nacimiento = fecha_nacimiento;
+		this.nombres = nombres;
+		this.apellidos = apellidos;
+		this.cedula = cedula;
+		this.telefono = telefono;
+	}
+
+	public Long getId() {
+		return Id;
+	}
+
+	public void setId(Long id) {
+		Id = id;
+	}
+
+	public String getFecha_nacimiento() {
+		return fecha_nacimiento;
+	}
+
+	public void setFecha_nacimiento(String fecha_nacimiento) {
+		this.fecha_nacimiento = fecha_nacimiento;
+	}
+
+	public String getNombres() {
+		return nombres;
+	}
+
+	public void setNombres(String nombres) {
+		this.nombres = nombres;
+	}
+
+	public String getApellidos() {
+		return apellidos;
+	}
+
+	public void setApellidos(String apellidos) {
+		this.apellidos = apellidos;
+	}
+
+	public Long getCedula() {
+		return cedula;
+	}
+
+	public void setCedula(Long cedula) {
+		this.cedula = cedula;
+	}
+
+	public Long getTelefono() {
+		return telefono;
+	}
+
+	public void setTelefono(Long telefono) {
+		this.telefono = telefono;
+	}
+	
+	
+
+}
