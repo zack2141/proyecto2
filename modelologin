@@ -1,0 +1,43 @@
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "login")
+public class Login {
+	
+	@Id
+	@Column(name="usuario", length = 50, nullable = false)
+	private String usuario;
+
+	@Column(name = "contraseña", length = 50, nullable = false)
+	private String ccontraseña;
+
+	public Login() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Login(String usuario, String ccontraseña) {
+		super();
+		this.usuario = usuario;
+		this.ccontraseña = ccontraseña;
+	}
+
+	public String getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
+	}
+
+	public String getCcontraseña() {
+		return ccontraseña;
+	}
+
+	public void setCcontraseña(String ccontraseña) {
+		this.ccontraseña = ccontraseña;
+	}
+	
