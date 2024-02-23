@@ -1,0 +1,4 @@
+	@Query(value="select contraseña, usuario from login"
+			+ "where contraseña =:incontraseña and usuario = :inusuario;",
+			 nativeQuery=true)
+	public List<Login> atenticacion(@Param ("usuario") String Usuario, @Param ("Contraseña") String Contraselña);
